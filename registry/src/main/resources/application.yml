@@ -1,0 +1,20 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: registry
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.ip-address}:${server.port}/eureka/
+#  server:
+#    eviction-interval-timer-in-ms: 1000
+
+security:
+  user:
+    name: user
+    password: ${REGISTRY_SERVER_PASSWORD:password}
