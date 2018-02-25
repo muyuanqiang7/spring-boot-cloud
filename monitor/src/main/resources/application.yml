@@ -23,7 +23,9 @@ eureka:
 
 spring:
   rabbitmq:
-    host: localhost
+    host: 45.77.6.219
+    username: admin
+    password: admin
   boot:
     admin:
       routes:
